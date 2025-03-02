@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: printapp
-        image: mosceo/printapp:1.1
+        image: mosceo/printapp:latest
