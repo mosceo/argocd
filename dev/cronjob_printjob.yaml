@@ -12,3 +12,4 @@ spec:
           - name: printjob
             image: mosceo/printjob:1.0
             imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
