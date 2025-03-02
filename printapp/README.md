@@ -1,3 +1,3 @@
 ```shell
-docker build -t printapp:1.0 -t printapp:latest .
+docker build -t mosceo/printapp:1.0 -t moaceo/printapp:latest .
 ```

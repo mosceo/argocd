@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: printapp
+  labels:
+    app: printapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: printapp
+  template:
+    metadata:
+      labels:
+        app: printapp
+    spec:
+      containers:
+      - name: printapp
+        image: mosceo/printapp:1.0
