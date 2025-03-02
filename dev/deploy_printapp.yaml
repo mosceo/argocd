@@ -17,3 +17,4 @@ spec:
       containers:
       - name: printapp
         image: mosceo/printapp:latest
+        imagePullPolicy: Always
