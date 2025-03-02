@@ -11,7 +11,7 @@ import (
 func main() {
 	go func() {
 		for {
-			log.Println("App is working ok")
+			log.Println("Application is working ok")
 			time.Sleep(5 * time.Second)
 		}
 	}()
@@ -20,5 +20,5 @@ func main() {
 	signal.Notify(interrupt, syscall.SIGINT, syscall.SIGTERM)
 	<-interrupt
 
-	log.Println("Bailing out on signal")
+	log.Println("Exiting out on signal")
 }
