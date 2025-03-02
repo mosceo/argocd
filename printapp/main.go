@@ -16,6 +16,11 @@ func main() {
 		}
 	}()
 
+	go func() {
+		time.Sleep(time.Minute)
+		panic("fail")
+	}()
+
 	interrupt := make(chan os.Signal, 1)
 	signal.Notify(interrupt, syscall.SIGINT, syscall.SIGTERM)
 	<-interrupt
