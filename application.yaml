@@ -1,14 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: myprojects
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/mosceo/argocd.git
     targetRevision: HEAD
-    path: dev
+    path: resources
+    directory:
+      recursive: true
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
